@@ -1,4 +1,4 @@
-# FaceBlocker
+# Face Block
 Chrome extension that detects, recognizes and blocks faces in images and videos while 
 browsing the web, with the faceAPI.js library. The main goal of the extension is to protect 
 your privacy people in the images and videos, preventing their use in an illegal 
