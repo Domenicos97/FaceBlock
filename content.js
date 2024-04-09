@@ -493,7 +493,6 @@ async function faceVideo () {
         handleVideoPlayback();
       } else {
         setTimeout(checkVideoReady, 200);
-        console.log("Ciaoao");
       }
     }
 
