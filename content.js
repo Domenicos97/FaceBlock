@@ -492,7 +492,7 @@ async function faceVideo () {
       if (video && video.readyState >= 2) {
         handleVideoPlayback();
       } else {
-        setTimeout(checkVideoReady, 200);
+        setTimeout(checkVideoReady, 100);
       }
     }
 
