@@ -1,0 +1,217 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="font-awesome/fontawesome-free-6.5.1-web/css/all.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  </head>
+  <body>
+
+    <div class="wrapper">
+      <div class="buttonWrapper">
+        <button class="tab-button active" style="border-top-left-radius: 10px;" data-id="yourImage">Your image</button>
+        <button class="tab-button" data-id="faces">Faces</button>
+        <button class="tab-button" style="border-top-right-radius: 10px;" data-id="options">Options</button>
+      </div>
+      <div class="contentWrapper">
+        <div class="content active" id="yourImage">
+          <p class="info">
+            In this section, you can upload and process an image. Once finished, you can download it or share it on social media.
+          </p>
+
+          <div id="yourImageArea" class="border border-primary rounded">
+            <div id="drop-myZone">
+              <span class="icon">
+                <i id="upload-myFace" class="fa-solid fa-file-arrow-up"></i>
+              </span>
+              <span class="text">Drag image here or click to select it</span>
+              <input id="choose-myFace" type="file" accept="image/*" multiple>
+            </div>
+            <hr>
+            <div id="noImage" class="justify-content-center">
+              <h2>No Image Present</h2>
+            </div>
+            
+      
+            <div id="imageContainer" class="image-container">
+              <img id="imagePreview">
+              <button id="deleteButton" type='button' class="btn btn-danger"><i class="fa fa-trash"></i></button>
+            </div>
+      
+            <div id="myButton" class="d-flex justify-content-around">
+              <a id="downloadButton" class="btn btn-primary"><i class="fa fa-download"></i> Download</a>
+              <button id="shareButton" type='button' class="btn btn-primary"><i class="fa fa-share-alt"></i> Share</button>
+            </div>
+      
+            <div id="myDIV">
+              <div id="share-buttons">
+      
+                <a class="facebook" target="blank"><i class="fab fa-facebook"></i></a>
+                <a class="twitter" target="blank"><i class="fab fa-x-twitter"></i></a>
+                <a class="linkedin" target="blank"><i class="fab fa-linkedin"></i></a>
+                <a class="reddit" target="blank"><i class="fab fa-reddit"></i></a>
+                <a class="whatsapp" target="blank"><i class="fab fa-whatsapp"></i></a>
+                <a class="telegram" target="blank"><i class="fab fa-telegram"></i></a>
+      
+              </div>
+            </div>
+          </div>
+        
+        </div>
+
+        <div class="content" id="faces">
+          <p class="info">
+            In this section, you can upload faces to block. Activate them according to your preferences.
+          </p>
+
+          <div id="divCards" class="border border-warning rounded">
+      
+            <div id="folders-area" class="container">        
+              <div id="drop-area-folders">
+                <div id="drop-zone-folders">
+                  <span class="icon">
+                    <i id="upload-face-folder" class="fa-solid fa-file-arrow-up"></i>
+                  </span>
+                  <span class="text">Drag images here or click to select them to create a folder</span>
+                  <input id="choose-face-folder" type="file" accept="image/*" multiple>
+                </div>
+              </div>
+      
+              <hr>
+      
+              <div id="selectAll">
+              <!-- <div class="border border-warning rounded"> -->
+                <div class="row justify-content-around">
+                  <div class="card col-12">
+                    <div id="detection-area" class="row justify-content-center">
+                      <div id="detection" class="col-8">
+                        <h3>Set all faces</h3>
+                      </div>
+                      <div class="col-4">
+                        <button type="button" id="on-button" data-toggle="tooltip" data-placement="bottom" title="Enable detection" class="btn btn-success">On</button>
+                        <button type="button" id="off-button" data-toggle="tooltip" data-placement="bottom" title="Disable detection" class="btn btn-danger">Off</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      
+                <div id="noFolder" class="justify-content-center">
+                  <h2>No Folder Present</h2>
+                </div>
+
+                <div class="preview"></div>
+              <!-- </div> -->
+
+            </div>
+      
+            <div id="drop-area" hidden>
+              <button type="button" id="back" class="btn btn-danger">
+                <i class="fa fa-arrow-left"></i>
+                Back
+              </button>
+              <hr>
+              <div id="drop-zone">
+                <span class="icon">
+                  <i id="upload-face" class="fa-solid fa-file-arrow-up"></i>
+                </span>
+                <span class="text">Drag images here or click to select them</span>
+                <input id="choose-face" type="file" accept="image/*" multiple>
+              </div>
+              <hr>
+              <div id="noImages" class="justify-content-center">
+                <h2>No Image Present</h2>
+              </div>
+              <div class="preview"></div>
+            </div>
+
+          </div>
+
+        </div>
+
+        
+
+        <div class="content" id="options">
+
+          <!-- <div id="first-div"> -->
+
+            <div class="row justify-content-around list">
+              <div class="card col-11">
+                <div id="mode-area" class="row justify-content-center">
+                  <div id="models" class="col-3">
+                    <h3>Mode</h3>
+                  </div>
+                  <div class="col-8">
+                    <button type="button" id="tiny-model" data-toggle="tooltip" data-placement="bottom" title="By activating the fast mode, face detection will be faster but less accurate" class="active btn btn-primary">Fast</button>
+                    <button type="button" id="bigger-model" data-toggle="tooltip" data-placement="bottom" title="By activating the slow mode, face detection will be slower but more accurate" class="btn btn-primary">Slow</button>
+                    <button type="button" id="auto-model" data-toggle="tooltip" data-placement="bottom" title="By activating the auto mode, the face detection will be done according to the performance" class="btn btn-primary">Auto</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+      
+            <div class="row justify-content-around list">
+              <div class="card col-11">
+                <div id="mode-area" class="row justify-content-center">
+                  <div id="models" class="col-3">
+                    <h3>Mask</h3>
+                  </div>
+                  <div class="col-8">
+                    <div class="container">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sceltaForma" id="immagineRadio" value="immagine">
+                        <label class="form-check-label" for="immagineRadio">Image</label>
+                      </div>
+                      <div class="form-check mb-2">
+                          <input class="form-check-input" type="radio" name="sceltaForma" id="cerchioRadio" value="cerchio" checked>
+                          <label class="form-check-label" for="cerchioRadio">Circle</label>
+                      </div>
+                      <div class="form-group mb-2" id="selettoreColore">
+                        <label for="coloreCerchio">Select a color for the circle:</label>
+                        <input type="color" class="form-control" id="selettore-colore-cerchio">
+                      </div>
+                    </div>                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="row justify-content-around list">
+              <div class="card col-11">
+                <div id="mode-area" class="row justify-content-center">
+                  <div id="models" class="col-3">
+                    <h3>Theme</h3>
+                  </div>
+                  <div class="col-8">
+                    <button type="button" id="light-theme" data-toggle="tooltip" data-placement="bottom" title="Light theme" class="active btn btn-primary">Light</button>
+                    <button type="button" id="dark-theme" data-toggle="tooltip" data-placement="bottom" title="Dark theme" class="btn btn-primary">Dark</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          <!-- </div> -->
+
+        </div>
+
+      </div>
+    </div>
+    
+
+
+    <div id="loading" class="text-center" hidden>
+      <div class="d-flex flex-column align-items-center">
+        <div class="spinner-border" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <p style="font-weight: bold;">Loading...</p>
+      </div>
+    </div>
+
+
+    <script src="node_modules/@vladmandic/face-api/dist/face-api.js"></script>
+    <script src="popup.js"></script>
+
+  </body>
+</html>

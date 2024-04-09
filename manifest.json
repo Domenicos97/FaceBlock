@@ -1,0 +1,65 @@
+{
+  "manifest_version": 3,
+  "name": "Face Block",
+  "version": "1.0",
+  "description": "Blocking faces on the web",
+  "icons": {
+    "16":"icons/16.png",
+    "32":"icons/32.png",
+    "48":"icons/48.png",
+    "128":"icons/128.png"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "node_modules/@vladmandic/face-api/model/*",
+        "icon.png",
+        "check.png",
+        "cross.png"
+      ],
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ]
+    }
+  ],
+  "content_scripts": [
+    {
+      "js": [
+        "node_modules/@vladmandic/face-api/dist/face-api.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ],
+      "run_at": "document_start"
+    },
+    {
+      "js": [
+        "content.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "storage",
+    "activeTab",
+    "contextMenus",
+    "notifications",
+    "unlimitedStorage",
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback"
+  ],
+  "background":{
+    "service_worker": "background.js"
+  },
+  "host_permissions":[
+    "http://*/*",
+    "https://*/*"
+  ]
+}

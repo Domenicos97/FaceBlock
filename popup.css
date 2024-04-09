@@ -1,0 +1,365 @@
+html{
+    height: 0px;
+    border: none;
+}
+
+body {
+    padding: 10px 10px 10px 10px;
+
+    height: 100%;
+}
+
+#folders-area {
+    padding: 0;
+}
+
+#loading{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    background:rgba(255,255,255,0.8);
+}
+
+#mode-area{
+    position: relative;
+    padding-top: 13px;
+}
+
+#drop-zone-folders {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #666;
+    position: relative;
+    overflow: hidden;
+
+    background-color: white;
+}
+
+#drop-zone {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 170px;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #666;
+    position: relative;
+    overflow: hidden;
+}
+
+#drop-zone:hover, #drop-zone-folders:hover {
+    background-color: #f5f5f5;
+}
+
+.icon {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.text {
+    text-align: center;
+    max-width: 80%;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+#noFolder, #noImages, #noImage{
+    display: flex;
+}
+
+.preview {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5px;
+    width: 450px;
+}
+  
+.preview img {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+}
+
+.card.col-7, .card.col-5{
+    height: 80px;
+}
+
+div.col-4{
+    display: flex;
+    justify-content: center;
+}
+
+div.col-5{
+    display: flex;
+    justify-content: center;
+}
+
+.row.justify-content-around{
+    margin: 0;
+}
+
+#models{
+    position: relative;
+    font-size: 33px;
+    font-weight: bold;
+    padding-top: 5px;
+}
+
+#detection-area{
+    position: relative;
+    padding-top: 10px;
+}
+
+#detection{
+    position: relative;
+    padding-top: 10px;
+    font-size: 33px;
+    font-weight: bold;
+}
+
+#tiny-model, #bigger-model, #auto-model{
+	position: relative;
+	top: -6px;
+	border: 0;
+	transition: all 40ms linear;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#tiny-model.btn-primary, #bigger-model.btn-primary, #auto-model.btn-primary{
+	background-color: gray;
+}
+
+#tiny-model.btn-primary:active, #bigger-model.btn-primary:active, #auto-model.btn-primary:active,
+#tiny-model.btn-primary.active, #bigger-model.btn-primary.active, #auto-model.btn-primary.active{
+	background-color: #4274D7;
+}
+
+#on-button, #off-button{
+	position: relative;
+	top: -6px;
+	border: 0;
+	transition: all 40ms linear;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+#drop-myZone{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #666;
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+}
+
+#drop-myZone:hover{
+    background-color: #f5f5f5;
+}
+
+#upload-myFace{
+    margin-top: 10px;
+    text-align: center;
+}
+
+#drop-myText{
+    margin-top: 70px;
+    text-align: center;
+}
+
+#imagePreview{
+    width: 450px;
+    height: 300px;
+    background-position: cover;
+    background-size: cover;
+    object-fit: cover;
+}
+
+#myButton{
+    margin-top: 10px;
+}
+
+#myText{
+    margin-bottom: 25px;
+}
+
+#yourImageArea{
+    background-color: #f0f8ff;
+    padding: 3px;
+}
+
+#divCards{
+    background-color: #fffAf0;
+    padding: 3px;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+#deleteButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 40px;
+}
+
+#share-container span {
+    display: block;
+    margin: 3rem auto;
+    font-size: 50px;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+#share-buttons i {
+    font-size: 30px;
+    margin: 20px;
+}
+
+.facebook {
+    color: #3b5998;
+}
+
+.twitter {
+    color: #55acee;
+}
+
+.linkedin {
+    color: #0077b5;
+}
+
+.reddit {
+    color: #cb2027;
+}
+
+.whatsapp {
+    color: #25D366;
+}
+
+.telegram {
+    color: #229ED9;
+}
+
+.facebook, .twitter, .linkedin, .reddit, .whatsapp, .telegram {
+    opacity: 0.6;
+}
+
+.facebook:hover, .twitter:hover, .linkedin:hover, .reddit:hover, .whatsapp:hover, .telegram:hover {
+    opacity: 0.9;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Rock+Salt|Shadows+Into+Light|Cedarville+Cursive');
+
+.content.active {
+    display: block;
+    width: 457px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.content {
+    display: none;   
+}
+
+p {
+    text-align: left;
+    padding: 10px;
+    padding-bottom: 0;
+}
+
+.info{
+    text-align: left;
+    padding: 10px;
+    padding-bottom: 0;
+}
+
+.wrapper {
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, .1);
+    width: 457px;
+}
+
+.buttonWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.tab-button {
+    letter-spacing: 3px;
+    border: none;
+    padding: 10px;
+    background-color: #bccbe9;
+    color: #232c3d;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.tab-button:hover {
+    background-color: #d5e3ff;
+}
+
+.tab-button.active {
+    background-color: white;
+}
+
+#options {
+    padding-top: 10px;
+}
+
+.list{
+    padding-bottom: 5px;
+}
+
+#light-theme, #dark-theme{
+	position: relative;
+	top: -6px;
+	border: 0;
+	transition: all 40ms linear;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#light-theme.btn-primary, #dark-theme.btn-primary{
+	/*box-shadow: 0 0 0 1px gray, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 gray, 0 8px 8px 1px rgba(0, 0, 0, 0.5);*/
+	background-color: gray;
+}
+
+#light-theme.btn-primary:active, #dark-theme.btn-primary:active,
+#light-theme.btn-primary.active, #dark-theme.btn-primary.active{
+	/*box-shadow: 0 0 0 1px #417fbd inset, 0 0 0 1px rgba(255, 255, 255, 0.15) inset, 0 1px 3px 1px rgba(0, 0, 0, 0.3);*/
+	background-color: #4274D7;
+}
