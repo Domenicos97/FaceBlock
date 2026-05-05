@@ -8,7 +8,7 @@
 *   **Target Toggle Control:** Ogni volto caricato nel database locale ha un interruttore ON/OFF dedicato per decidere in tempo reale chi oscurare durante la navigazione.
 *   **Personalizzazione dell'Oscuramento:** 
     *   **Scelta del Colore:** È possibile selezionare il colore del cerchio che copre il volto per adattarlo alle proprie preferenze estetiche.
-    *   **Overlay Cartoon:** In alternativa al colore solido o al blur, è possibile selezionare un'immagine precaricata (una faccia barrata in stile cartoon) da sovrapporre ai volti rilevati.
+    *   **Overlay Cartoon:** In alternativa al cerchio, è possibile selezionare un'immagine precaricata (una faccia barrata in stile cartoon) da sovrapporre ai volti rilevati.
 *   **Privacy-First:** L'elaborazione avviene interamente in locale sul dispositivo dell'utente tramite TensorFlow.js. Nessun dato biometrico o immagine viene inviata a server esterni.
 *   **Modalità Editor Single-Image:** Carica una singola foto, seleziona i volti da oscurare tramite interruttori e scarica l'immagine protetta o condividila direttamente sui social (es. Facebook).
 *   **Supporto Video (YouTube):** Offuscamento dinamico dei volti target in tempo reale durante la riproduzione video su YouTube.
