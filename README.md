@@ -25,7 +25,7 @@
 
 1.  **Clona il repository:**
     ```bash
-    git clone [https://github.com/Domenicos97/FaceBlock.git](https://github.com/Domenicos97/FaceBlock.git)
+    git clone https://github.com/Domenicos97/FaceBlock.git
     ```
 2.  Apri Chrome e vai a `chrome://extensions/`.
 3.  Attiva la **Modalità sviluppatore** in alto a destra.
